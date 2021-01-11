@@ -30,6 +30,7 @@ public class Main {
         System.out.println(main.countWords("This is a test"));
         System.out.println(main.rps("scissors", "rock"));
         System.out.println(main.capToFront("hApPy"));
+        System.out.println(main.doubleChar("1234!_ "));
     }
     
     public boolean isInOrder(String str){
@@ -154,6 +155,17 @@ public class Main {
             if(s1.charAt(i) >= 'a' && s1.charAt(i) <= 'z'){
                 tmp += s1.charAt(i);
             }
+        }
+        return tmp;
+    }
+    
+    public String doubleChar(String s) {
+        int index = 0;
+        String tmp = "";
+        
+        for(int i = 0; i < s.length(); i++){
+            tmp += s.charAt(i) + "" + s.charAt(index);
+            index++;
         }
         return tmp;
     }
