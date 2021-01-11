@@ -31,6 +31,7 @@ public class Main {
         System.out.println(main.rps("scissors", "rock"));
         System.out.println(main.capToFront("hApPy"));
         System.out.println(main.doubleChar("1234!_ "));
+        System.out.println(main.toHex("hello world"));
     }
     
     public boolean isInOrder(String str){
@@ -169,6 +170,17 @@ public class Main {
         }
         return tmp;
     }
+    
+    public String toHex(String str) {
+        String tmp = "";
+        int hex;
+        for(int i = 0; i < str.length(); i++){
+            hex = str.charAt(i);
+            tmp += Integer.toHexString(hex) + " ";
+        }
+        return tmp;
+    }
+    
 }
 
 /*
